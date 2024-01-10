@@ -1,88 +1,60 @@
 
-
-// Cada producto tendrá:
-
-export type TipoIva =
-  | "general"
-  | "reducido"
-  | "superreducidoA"
-  | "superreducidoB"
-  | "superreducidoC"
-  | "sinIva";
-
-interface Producto {
-  nombre: string;
-  precio: number;
-  tipoIva: TipoIva;
-}
-
-// Cada línea del ticket tendrá:
-
-export interface LineaTicket {
-    producto: Producto;
-    cantidad: number;
+export interface ValidacionClave {
+    esValida: boolean;
+    error?: string;
   }
 
-// El resultado que devolverá la función calculaTicket tiene la siguiente interfaz:
-
-export interface ResultadoLineaTicket {
-    nombre: string;
-    cantidad: number;
-    precioSinIva: number;
-    tipoIva: TipoIva;
-    precioConIva: number;
-  }
-
-  //En cuanto a los totales:
-
-  export interface ResultadoTotalTicket {
-    totalSinIva: number;
-    totalConIva: number;
-    totalIva: number;
-  }
-  
-  export interface TotalPorTipoIva {
-    tipoIva: TipoIva;
-    cuantia : number;
-  }
-  
-  export interface TicketFinal {
-    lineas: ResultadoLineaTicket[];
-    total: ResultadoTotalTicket;
-    desgloseIva: TotalPorTipoIva[];
-  }
-
-  export const productos: LineaTicket[] = [
-    {
-      producto: {
-        nombre: "Legumbres",
-        precio: 2,
-        tipoIva: "general",
-      },
-      cantidad: 2,
-    },
-    {
-      producto: {
-        nombre: "Perfume",
-        precio: 20,
-        tipoIva: "general",
-      },
-      cantidad: 3,
-    },
-    {
-      producto: {
-        nombre: "Leche",
-        precio: 1,
-        tipoIva: "superreducidoC",
-      },
-      cantidad: 6,
-    },
-    {
-      producto: {
-        nombre: "Lasaña",
-        precio: 5,
-        tipoIva: "superreducidoA",
-      },
-      cantidad: 1,
-    },
-  ];
+export const commonPasswords: string[] = [
+  "password",
+  "123456",
+  "qwerty",
+  "admin",
+  "letmein",
+  "welcome",
+  "monkey",
+  "sunshine",
+  "password1",
+  "123456789",
+  "football",
+  "iloveyou",
+  "1234567",
+  "123123",
+  "12345678",
+  "abc123",
+  "qwerty123",
+  "1q2w3e4r",
+  "baseball",
+  "password123",
+  "superman",
+  "987654321",
+  "mypass",
+  "trustno1",
+  "hello123",
+  "dragon",
+  "1234",
+  "555555",
+  "loveme",
+  "hello",
+  "hockey",
+  "letmein123",
+  "welcome123",
+  "mustang",
+  "shadow",
+  "12345",
+  "passw0rd",
+  "abcdef",
+  "123abc",
+  "football123",
+  "master",
+  "jordan23",
+  "access",
+  "flower",
+  "qwertyuiop",
+  "admin123",
+  "iloveyou123",
+  "welcome1",
+  "monkey123",
+  "sunshine1",
+  "password12",
+  "1234567890",
+];
