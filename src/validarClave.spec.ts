@@ -1,12 +1,14 @@
 import {
-    tieneMayusculasYMinusculas,
-    tieneNumeros,
-    tieneCaracteresEspeciales,
-    tieneLongitudMinima,
-    tieneNombreUsuario,
-    tienePalabrasComunes,
     validarClave,
   } from './validarClave';
+
+  import { 
+    tieneCaracteresEspeciales,
+    tieneLongitudMinima,
+    tieneNumeros,
+    tieneMayusculasYMinusculas,
+    tieneNombreUsuario,
+    tienePalabrasComunes } from "./validarClave.helpers";
 
 // Mayúsucas y minúsculas
 
